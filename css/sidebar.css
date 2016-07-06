@@ -1,0 +1,83 @@
+
+
+#sidebar {
+  font-family: 'Verdana', sans-serif;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  padding-right: 2px;
+  -webkit-user-select: none;
+  flex: 1;
+	max-width: 30% !important;
+	width: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+
+/* control buttons */
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dropdown-menu button{
+  width: 100%;
+  padding-right: 10px;
+}
+
+.icon-sw-highlighter{
+  background: url('icon/highlight.ico') no-repeat center center;
+  background-size: 18px 18px;
+}
+
+#showround{
+  background: url('icon/dslogo.png') no-repeat center center;
+}
+
+
+
+
+/*search box*/
+
+#searchtext {
+    width: 100%;
+    visibility: hidden;
+    height: 26px;
+}
+#searchtext+.select2{
+  width: 100% !important;
+}
+
+#team-members-select+.select2{
+  width: 100% !important;
+}
+
+
+#share-select+.select2{
+  width: 100% !important;
+}
+
+
+#controls .select2-results__message {
+  visibility: hidden;
+    line-height: 0pt;
+
+}
+
+#controls .select2-results__message:after {
+  content:'Search titles, headings, full text, shared, and speeches';
+  visibility: visible;
+  display: block;
+    line-height: 12pt;
+}
+
+
+
+
+/*login button*/
+#login {
+  /*display: none;*/
+  background: #d9534f url('icon/dslogo.png') no-repeat center left;
+}

@@ -1,0 +1,168 @@
+
+/*fisheye*/
+/*li:hover{
+  zoom: 2;
+  width: 300px;
+}
+li:hover+li{zoom: 1.7;
+width: 300px;}
+li:hover+li+li{zoom: 1.3;
+width: 300px;}
+li:hover+li+li+li{zoom: 1.1;
+width: 300px;}*/
+/*li{transition: all .2s ease-in-out;}*/
+
+
+
+
+
+
+aside ul{
+  list-style-type: none;
+
+}
+
+/*NAVIVAGOR*/
+
+#nav-tab-container{
+  height: 50px;
+  width: 100%;
+}
+.nav-tab{
+  height: 50px;
+}
+
+
+
+/* FILETREE */
+
+#filetree {
+  flex: 2;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/*collapse / expand icons and cursor*/
+#filetree ul{
+  padding:0;
+  padding-top: 2px;
+  margin:0;
+}
+ul > label {
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  cursor: url(icon/minimize.ico) 0 0, nw-resize !important;
+  padding: 0px 1px;
+  font-weight: bold;
+  _border-top: 1px solid  rgb(170, 207, 231);;
+}
+ul > label::before{
+  content: "\e80a";
+  padding-right: 3px;
+  font-family: "debatesynergy-icons";
+}
+
+ul.collapsed > label {
+  cursor: url(icon/expand.ico) 0 0, nw-resize !important;
+}
+ ul.collapsed > label::before{
+  content: "\e80d";
+}
+
+
+/*file name on hover effect*/
+
+#filetree ul>li:hover, #filetree ul.collapsed:hover>label{
+
+     box-shadow: inset 0 0 0 40px rgba(170, 207, 231, 0.6);
+}
+
+
+#filetree ul:not(.collapsed)>label:hover{
+box-shadow: inset 0 0 0 40px rgba(193,46,42,.5);
+}
+
+
+
+
+#filetree ul > li {
+  _padding-left: 20px;
+}
+
+#filetree li {
+  display: block;
+  position: relative;
+  margin: 0px;
+
+  font-size: 11pt;
+  line-height: 100%;
+  __cursor: row-resize;
+}
+
+
+
+#filetree li.selected{
+  background-color: rgb(170, 207, 231);
+}
+/*:not(:hover)*/
+
+#filetree .collapsed > li {
+  display: none;
+}
+
+#filetree ul.opened{
+  background-color: #EBF6FC;
+}
+
+#filetree ul.opened>label{
+  background-color: rgb(170, 207, 231);
+}
+
+
+/*headings and subheadings showed in filetree*/
+
+.h1 {
+  padding-left: 10px;
+  font-weight: 400;
+}
+.h2 {
+  padding-left: 20px;
+  font-size: 90%;
+}
+.h3 {
+  padding-left: 30px;
+  font-size: 75%;
+  color: #444;
+}
+
+
+/*filetree sharing*/
+
+.ft-publicedit{
+  color: firebrick;
+}
+.ft-public{
+  color: red;
+}
+.ft-team{
+  color: orange;
+}
+
+
+/*filetree dragging*/
+
+.ft-dragged-over::before{
+  content: '\27a5';
+  position: absolute;
+  font-size: 200%;
+  font-weight: bold;
+  color: rgb(170, 207, 231);
+  top:8px;
+
+}
+.ft-being-dragged .ft-name {
+  opacity: .5;
+  __box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .8);
+}
